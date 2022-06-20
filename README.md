@@ -4,6 +4,8 @@ A Go library, for easy creation of repeating function calls. Use it for things l
 
 It is also supports aggregation of several repeaters in one manager (see [`MultiRepeater`](#multirepeater)) 
 
+Documentation: https://pkg.go.dev/github.com/nickname76/repeater
+
 ## Exmple usage
 
 ### StartRepeater
