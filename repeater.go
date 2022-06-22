@@ -4,7 +4,7 @@ import (
 	"time"
 )
 
-// Start repeating fnToCall with given frequency, frequency can be 0, if so, ticker won't be used.
+// Start repeating fnToCall with passed frequency, frequency can be 0, if so, ticker won't be used.
 // Use returned function to stop repeater, this function waits until repeater is stopped.
 func StartRepeater(frequency time.Duration, fnToCall func()) (stop func()) {
 	if fnToCall == nil {

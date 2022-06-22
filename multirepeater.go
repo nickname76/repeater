@@ -20,7 +20,7 @@ func NewMultiRepeater[ID comparable]() *MultiRepeater[ID] {
 }
 
 // Works almost same as original StartRepeater, but delegates stop function managment to MultiRepeater and requires id for repeater.
-// Returns `true` on success, and `false` if given id is occupied.
+// Returns `true` on success, and `false` if passed id is occupied.
 func (mr *MultiRepeater[ID]) StartRepeater(id ID, frequency time.Duration, fnToCall func()) bool {
 	mr.mux.Lock()
 	if mr.repeaters[id] != nil {
@@ -32,7 +32,7 @@ func (mr *MultiRepeater[ID]) StartRepeater(id ID, frequency time.Duration, fnToC
 	return true
 }
 
-// Stops repeater by ID. Return `true` on success, and `false` if given id is not found.
+// Stops repeater by ID. Return `true` on success, and `false` if passed id is not found.
 func (mr *MultiRepeater[ID]) StopRepeater(id ID) bool {
 	mr.mux.Lock()
 	if mr.repeaters[id] == nil {
