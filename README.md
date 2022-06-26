@@ -8,7 +8,7 @@ Documentation: https://pkg.go.dev/github.com/nickname76/repeater
 
 *Please, **star** this repository, if you found this library useful.*
 
-## Exmple usage
+## Example usage
 
 ### StartRepeater
 
